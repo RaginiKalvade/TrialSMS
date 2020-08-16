@@ -37,8 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'django_twilio',
     'smsapp',
+=======
+    'django-twilio',
+>>>>>>> f50660765fe49b6689200bf98d690036c10c1eb7
 ]
 
 MIDDLEWARE = [

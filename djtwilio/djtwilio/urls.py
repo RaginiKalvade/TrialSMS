@@ -13,19 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.conf.urls import patterns, include, url
-
 from django.contrib import admin
-admin.autodiscover()
+from django.urls import path
 
-urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'djtwilio.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+urlpatterns = [
+    path('admin/', admin.site.urls),
+]
 
-    url(r'^admin/', include(admin.site.urls)),
-
-    # Here we add our Twilio URLs
-    url(r'^sms/$', 'djtwilio.views.sms'),
-    url(r'^ring/$', 'djtwilio.views.ring'),
-)
